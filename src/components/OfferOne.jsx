@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 const OfferOne = () => {
     return (
-        <section className="offer pt-80 pb-80">
-            <div className="container container-lg">
+        <section className="">
+            {/* <div className="container container-lg">
                 <div className="row gy-4">
                     <div className="col-sm-6">
                         <div className="offer-card position-relative rounded-16 bg-main-600 overflow-hidden p-16 flex-align gap-16 flex-wrap z-1">
@@ -71,7 +71,7 @@ const OfferOne = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </section>
 
     )

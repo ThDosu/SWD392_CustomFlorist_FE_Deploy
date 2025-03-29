@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
-import Slider from 'react-slick';
+
 
 const OrganicOne = () => {
     function SampleNextArrow(props) {
@@ -28,54 +27,11 @@ const OrganicOne = () => {
             </button>
         );
     }
-    const settings = {
-        dots: false,
-        arrows: true,
-        infinite: true,
-        speed: 1000,
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        initialSlide: 0,
-        autoplay: true,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />,
-        responsive: [
-            {
-                breakpoint: 1599,
-                settings: {
-                    slidesToShow: 6,
-                },
-            },
-            {
-                breakpoint: 1399,
-                settings: {
-                    slidesToShow: 4,
-                },
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 3,
-                },
-            },
-            {
-                breakpoint: 575,
-                settings: {
-                    slidesToShow: 2,
-                },
-            },
-            {
-                breakpoint: 424,
-                settings: {
-                    slidesToShow: 1,
-                },
-            },
-        ],
-    };
+  
     return (
-        <section className="organic-food py-80">
-            <div className="container container-lg">
-                <div className="section-heading">
+        <section className="">
+            <div className="">
+                {/* <div className="section-heading">
                     <div className="flex-between flex-wrap gap-8">
                         <h5 className="mb-0">Organic Food</h5>
                         <div className="flex-align mr-point gap-16">
@@ -110,8 +66,8 @@ const OrganicOne = () => {
                                     <h6 className="title text-lg fw-semibold mt-12 mb-8">
                                         <Link to="/product-details" className="link text-line-2">
                                             Taylor Farms Broccoli Florets Vegetables
-                                        </Link>
-                                    </h6>
+                                        </Link> */}
+                                    {/* </h6>
                                     <div className="flex-align gap-4">
                                         <span className="text-main-600 text-md d-flex">
                                             <i className="ph-fill ph-storefront" />
@@ -377,8 +333,8 @@ const OrganicOne = () => {
                                         </Link>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </div> */}
+                        {/* </div>
                         <div>
                             <div className="product-card px-8 py-16 border border-gray-100 hover-border-main-600 rounded-16 position-relative transition-2">
                                 <Link
@@ -428,7 +384,7 @@ const OrganicOne = () => {
                             </div>
                         </div>
                     </Slider>
-                </div>
+                </div> */}
             </div>
         </section>
 

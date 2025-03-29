@@ -15,9 +15,9 @@ const BigDealOne = () => {
                             <img src="assets/images/thumbs/big-deal1.png" alt="" />
                         </div>
                         <div className="col-md-6 big-deal-box__content text-center">
-                            <h4 className="mb-20 text-uppercase">WATCHES BIG DEAL</h4>
+                            <h4 className="mb-20 text-uppercase">ĐỒNG HỒ ƯU ĐÃI LỚN</h4>
                             <p className="text-heading fw-medium">
-                                Wonlex KT07 4G positioning watches
+                                Đồng hồ định vị Wonlex KT07 4G
                             </p>
                         </div>
                         <div className="col-md-3 text-center d-md-block d-none">

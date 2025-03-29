@@ -78,8 +78,8 @@ const BrandOne = () => {
         ],
     };
     return (
-        <div className="brand py-80">
-            <div className="container container-lg">
+        <div className="">
+            {/* <div className="container container-lg">
                 <div className="brand-inner bg-color-one p-24 rounded-16">
                     <div className="section-heading">
                         <div className="flex-between flex-wrap gap-8">
@@ -126,7 +126,7 @@ const BrandOne = () => {
                         </Slider>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
 
     )

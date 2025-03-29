@@ -177,8 +177,8 @@
     --danger-200: #FECACA;
     --danger-300: #FCA5A5;
     --danger-400: #F87171;
-    --danger-500: #EF4444;
-    --danger-600: #DC2626;
+    /* --danger-500: #EF4444;
+    --danger-600: #DC2626; */
     --danger-700: #B91C1C;
     --danger-800: #991B1B;
     --danger-900: #7F1D1D;
@@ -196,12 +196,7 @@
     --warning-100: #FEF9C3;
     --warning-200: #FEF08A;
     --warning-300: #FDE047;
-    --warning-400: #FACC15;
-    --warning-500: #EAB308;
-    --warning-600: #FF9F29;
-    --warning-700: #f39016;
-    --warning-800: #e58209;
-    --warning-900: #d77907;
+   
     --info-50: #EFF6FF;
     --info-100: #DBEAFE;
     --info-200: #BFDBFE;
@@ -226,7 +221,19 @@
     --font-5xl: 3rem;
     --font-6xl: 3.75rem;
 }
+:root {
+    --main-two-600: #258f4a;
+}
 
+:root {
+    --primary-color: #299E60; /* Đổi màu chính */
+  }
+  
+  /* Nếu có class dùng màu cam */
+  .button {
+    background-color: var(--primary-color);
+  }
+  
 /* ========================= Variable Css End ======================== */
 /* ============================ Mixins Css Start ============================ */
 /* Media Breakpoint for Each Device Start */
@@ -6255,9 +6262,14 @@ input:focus-visible {
     background-color: var(--main-500) !important;
 }
 
-.bg-main-600 {
+.bg-main-600{
     background-color: var(--main-600) !important;
 }
+
+:root {
+    --main-600: #258f4a !important;
+}
+
 
 .bg-main-700 {
     background-color: var(--main-700) !important;

@@ -59,7 +59,7 @@ const ShortProductOne = () => {
     };
     return (
         <div className="short-product">
-            <div className="container container-lg">
+            {/* <div className="container container-lg">
                 <div className="row gy-4">
                     <div className="col-xxl-3 col-lg-4 col-sm-6">
                         <div className="p-16 border border-gray-100 hover-border-main-600 rounded-16 position-relative transition-2 ">
@@ -1155,7 +1155,7 @@ const ShortProductOne = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
 
     )

@@ -14,21 +14,20 @@ const DeliveryOne = () => {
                     <div className="row align-items-center">
                         <div className="col-md-3 d-md-block d-none">
                             <div className="delivery__man text-center">
-                                <img src="assets/images/thumbs/delivery-man.png" alt="" />
+                                <img src="assets/images/thumbs/logo.jpg" alt="" />
                             </div>
                         </div>
                         <div className="col-md-5 col-sm-7">
                             <div className="text-center">
                                 <h4 className="text-white mb-8">
-                                    We Delivery on Next Day from 10:00 AM to 08:00 PM
+                                    Chúng mình mở hàng vào Ngày Mai từ 9:00 sáng đến 10:00 tối
                                 </h4>
-                                <p className="text-white">For Orders starts from $100</p>
                                 <Link
                                     to="/shop"
                                     className="mt-16 btn btn-main-two fw-medium d-inline-flex align-items-center rounded-pill gap-8"
                                     tabIndex={0}
                                 >
-                                    Shop Now
+                                    Mua sắm ngay!
                                     <span className="icon text-xl d-flex">
                                         <i className="ph ph-arrow-right" />
                                     </span>
@@ -36,7 +35,7 @@ const DeliveryOne = () => {
                             </div>
                         </div>
                         <div className="col-md-4 col-sm-5 d-sm-block d-none">
-                            <img src="assets/images/thumbs/special-snacks-img.png" alt="" />
+                            <img src="assets/images/thumbs/wow.jpg" alt="" />
                         </div>
                     </div>
                 </div>

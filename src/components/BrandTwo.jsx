@@ -90,7 +90,7 @@ const BrandTwo = () => {
                 <div className="border border-gray-100 p-24 rounded-16">
                     <div className="section-heading mb-24">
                         <div className="flex-between mr-point flex-wrap gap-8">
-                            <h5 className="mb-0">Top Brands</h5>
+                            <h5 className="mb-0">Top Nhãn Hàng</h5>
 
                         </div>
                     </div>

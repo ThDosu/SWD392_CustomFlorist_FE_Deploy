@@ -3,6 +3,9 @@ import React from 'react'
 const ShippingOne = () => {
     return (
         <section className="shipping mb-24" id="shipping">
+              <div className="col-lg-12 text-center">
+                        <h3 className="text-main">Tại sao chọn CustomFlorist?</h3>
+                    </div>
             <div className="container container-lg">
                 <div className="row gy-4">
                     <div className="col-xxl-3 col-sm-6">
@@ -11,9 +14,9 @@ const ShippingOne = () => {
                                 <i className="ph-fill ph-car-profile" />
                             </span>
                             <div className="">
-                                <h6 className="mb-0">Free Shipping</h6>
+                                <h6 className="mb-0">Hoa nhập khẩu cao cấp</h6>
                                 <span className="text-sm text-heading">
-                                    Free shipping all over the US
+                                Chúng tôi sử dụng hoa nhập khẩu tươi nhất từ Hà Lan, Nhật Bản, Ecuador...
                                 </span>
                             </div>
                         </div>
@@ -24,9 +27,9 @@ const ShippingOne = () => {
                                 <i className="ph-fill ph-hand-heart" />
                             </span>
                             <div className="">
-                                <h6 className="mb-0"> 100% Satisfaction</h6>
+                                <h6 className="mb-0"> Thiết kế theo yêu cầu</h6>
                                 <span className="text-sm text-heading">
-                                    Free shipping all over the US
+                                Mỗi bó hoa là một kiệt tác được cá nhân hóa, phù hợp với từng sự kiện.
                                 </span>
                             </div>
                         </div>
@@ -37,10 +40,9 @@ const ShippingOne = () => {
                                 <i className="ph-fill ph-credit-card" />
                             </span>
                             <div className="">
-                                <h6 className="mb-0"> Secure Payments</h6>
+                                <h6 className="mb-0">Dịch vụ tận tâm</h6>
                                 <span className="text-sm text-heading">
-                                    Free shipping all over the US
-                                </span>
+                                Đội ngũ nhân sự florists nhiệt tình, chuyên nghiệp, với nhiều năm kinh nghiệm                                </span>
                             </div>
                         </div>
                     </div>
@@ -50,9 +52,9 @@ const ShippingOne = () => {
                                 <i className="ph-fill ph-chats" />
                             </span>
                             <div className="">
-                                <h6 className="mb-0"> 24/7 Support</h6>
+                                <h6 className="mb-0">Vận chuyển nhanh</h6>
                                 <span className="text-sm text-heading">
-                                    Free shipping all over the US
+                                Giao hoa nhanh chóng, hỗ trợ khách hàng 24/7, đảm bảo hài lòng.
                                 </span>
                             </div>
                         </div>

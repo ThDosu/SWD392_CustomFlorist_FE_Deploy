@@ -76,11 +76,11 @@ const HotDealsOne = () => {
         ],
     };
     return (
-        <section className="hot-deals pt-80">
-            <div className="container container-lg">
+        <section className="">
+            {/* <div className="container container-lg">
                 <div className="section-heading">
                     <div className="flex-between flex-wrap gap-8">
-                        <h5 className="mb-0">Hot Deals Todays</h5>
+                        <h5 className="mb-0"></h5>
                         <div className="flex-align mr-point gap-16">
                             <Link
                                 to="/shop"
@@ -404,7 +404,7 @@ const HotDealsOne = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </section>
 
     )

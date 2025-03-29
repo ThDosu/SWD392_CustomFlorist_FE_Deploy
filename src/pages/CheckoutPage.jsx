@@ -1,38 +1,42 @@
 import React from "react";
 import Preloader from "../helper/Preloader";
 import ColorInit from "../helper/ColorInit";
-import HeaderTwo from "../components/HeaderTwo";
+import HeaderOne from "../components/HeaderOne";
 import Breadcrumb from "../components/Breadcrumb";
 import FooterTwo from "../components/FooterTwo";
 import BottomFooter from "../components/BottomFooter";
 import ShippingOne from "../components/ShippingOne";
 import Checkout from "../components/Checkout";
 import ScrollToTop from "react-scroll-to-top";
+import { useLocation } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
 
 const CheckoutPage = () => {
-
-
+  const location = useLocation();
+  const order = location.state?.order;
+console.log('order', order)
 
   return (
     <>
+      <ToastContainer/>
       {/* ColorInit */}
-      <ColorInit color={true} />
+      <ColorInit color={false} />
 
       {/* ScrollToTop */}
-      <ScrollToTop smooth color="#FA6400" />
+      <ScrollToTop smooth color="#299E60" />
 
       {/* Preloader */}
       <Preloader />
 
-      {/* HeaderTwo */}
-      <HeaderTwo category={true} />
+      {/* HeaderOne */}
+      <HeaderOne category={true} />
 
       {/* Breadcrumb */}
       <Breadcrumb title={"Checkout"} />
 
       {/* Checkout */}
-      <Checkout />
+      <Checkout order={order}/>
 
       {/* ShippingOne */}
       <ShippingOne />

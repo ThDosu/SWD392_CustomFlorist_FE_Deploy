@@ -1,34 +1,19 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 
-const FeatureOne = () => {
+const FeatureOne = ({category}) => {
+    console.log(category)
+    const ArrowButton = ({ className, onClick, direction }) => (
+        <button
+            type="button"
+            onClick={onClick}
+            className={`${className} slick-${direction} slick-arrow flex-center rounded-circle bg-white text-xl hover-bg-main-600 hover-text-white transition-1`}
+        >
+            <i className={`ph ph-caret-${direction === 'next' ? 'right' : 'left'}`} />
+        </button>
+    );
 
-    function SampleNextArrow(props) {
-        const { className, onClick } = props;
-        return (
-            <button
-                type="button" onClick={onClick}
-                className={` ${className} slick-next slick-arrow flex-center rounded-circle bg-white text-xl hover-bg-main-600 hover-text-white transition-1`}
-            >
-                <i className="ph ph-caret-right" />
-            </button>
-        );
-    }
-    function SamplePrevArrow(props) {
-        const { className, onClick } = props;
-
-        return (
-
-            <button
-                type="button"
-                onClick={onClick}
-                className={`${className} slick-prev slick-arrow flex-center rounded-circle bg-white text-xl hover-bg-main-600 hover-text-white transition-1`}
-            >
-                <i className="ph ph-caret-left" />
-            </button>
-        );
-    }
     const settings = {
         dots: false,
         arrows: true,
@@ -37,254 +22,101 @@ const FeatureOne = () => {
         slidesToShow: 10,
         slidesToScroll: 1,
         initialSlide: 0,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />,
+        nextArrow: <ArrowButton direction="next" />, 
+        prevArrow: <ArrowButton direction="prev" />, 
         responsive: [
-            {
-                breakpoint: 1699,
-                settings: {
-                    slidesToShow: 9,
-                },
-            },
-            {
-                breakpoint: 1599,
-                settings: {
-                    slidesToShow: 8,
-                },
-            },
-            {
-                breakpoint: 1399,
-                settings: {
-                    slidesToShow: 6,
-                },
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 5,
-                },
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 4,
-                },
-            },
-            {
-                breakpoint: 575,
-                settings: {
-                    slidesToShow: 3,
-                },
-            },
-            {
-                breakpoint: 424,
-                settings: {
-                    slidesToShow: 2,
-                },
-            },
-            {
-                breakpoint: 359,
-                settings: {
-                    slidesToShow: 1,
-                },
-            },
-
+            { breakpoint: 1699, settings: { slidesToShow: 9 } },
+            { breakpoint: 1599, settings: { slidesToShow: 8 } },
+            { breakpoint: 1399, settings: { slidesToShow: 6 } },
+            { breakpoint: 992, settings: { slidesToShow: 5 } },
+            { breakpoint: 768, settings: { slidesToShow: 4 } },
+            { breakpoint: 575, settings: { slidesToShow: 3 } },
+            { breakpoint: 424, settings: { slidesToShow: 2 } },
+            { breakpoint: 359, settings: { slidesToShow: 1 } },
         ],
     };
+
+    const featureItems = [
+        { img: "https://happyflower.vn/app/uploads/2022/05/Hoacuoi_WhiteTulip_2.jpg", title: "Hoa cưới 💍" },
+        { img: "https://bizweb.dktcdn.net/100/347/446/files/hoa-khai-truong-cao-cap-sang-trong-o-cau-giay-ha-noi.jpg?v=1660226553731", title: "Hoa khai trương 🎊" },
+        { img: "https://nhahoa.com.vn/wp-content/uploads/2022/04/Hop-Hoa-Mung-Sinh-Nhat-Me-HH093.jpg", title: "Hoa sinh nhật 🎂" },
+        { img: "https://hoahanoi.com.vn/wp-content/uploads/2020/06/hoa-chuc-mung-sinh-nhat-bo-e1624945727169.jpg", title: "Hoa chúc mừng 🎉" },
+        { img: "https://dienhoaxanh.com/wp-content/uploads/2023/06/cam-hoa-de-ban-tiec-cuoi.png", title: "Hoa hội nghị & sự kiện 🏛️" },
+        { img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ70k4QuFO5Vl3mq1AsqhA4qnd2p3Y6VDitpA&s", title: "Hoa theo mùa & ngày lễ 🎄" },
+        { img: "https://happyflower.vn/app/uploads/2022/05/Hoacuoi_WhiteTulip_2.jpg", title: "Hoa cưới 💍" },
+        { img: "https://bizweb.dktcdn.net/100/347/446/files/hoa-khai-truong-cao-cap-sang-trong-o-cau-giay-ha-noi.jpg?v=1660226553731", title: "Hoa khai trương 🎊" },
+        { img: "https://nhahoa.com.vn/wp-content/uploads/2022/04/Hop-Hoa-Mung-Sinh-Nhat-Me-HH093.jpg", title: "Hoa sinh nhật 🎂" },
+        { img: "https://hoahanoi.com.vn/wp-content/uploads/2020/06/hoa-chuc-mung-sinh-nhat-bo-e1624945727169.jpg", title: "Hoa chúc mừng 🎉" },
+        { img: "https://dienhoaxanh.com/wp-content/uploads/2023/06/cam-hoa-de-ban-tiec-cuoi.png", title: "Hoa hội nghị & sự kiện 🏛️" },
+        { img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ70k4QuFO5Vl3mq1AsqhA4qnd2p3Y6VDitpA&s", title: "Hoa theo mùa & ngày lễ 🎄" },
+        { img: "https://happyflower.vn/app/uploads/2022/05/Hoacuoi_WhiteTulip_2.jpg", title: "Hoa cưới 💍" },
+        { img: "https://bizweb.dktcdn.net/100/347/446/files/hoa-khai-truong-cao-cap-sang-trong-o-cau-giay-ha-noi.jpg?v=1660226553731", title: "Hoa khai trương 🎊" },
+        { img: "https://nhahoa.com.vn/wp-content/uploads/2022/04/Hop-Hoa-Mung-Sinh-Nhat-Me-HH093.jpg", title: "Hoa sinh nhật 🎂" },
+        { img: "https://hoahanoi.com.vn/wp-content/uploads/2020/06/hoa-chuc-mung-sinh-nhat-bo-e1624945727169.jpg", title: "Hoa chúc mừng 🎉" },
+        { img: "https://dienhoaxanh.com/wp-content/uploads/2023/06/cam-hoa-de-ban-tiec-cuoi.png", title: "Hoa hội nghị & sự kiện 🏛️" },
+        { img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ70k4QuFO5Vl3mq1AsqhA4qnd2p3Y6VDitpA&s", title: "Hoa theo mùa & ngày lễ 🎄" },
+        { img: "https://happyflower.vn/app/uploads/2022/05/Hoacuoi_WhiteTulip_2.jpg", title: "Hoa cưới 💍" },
+        { img: "https://bizweb.dktcdn.net/100/347/446/files/hoa-khai-truong-cao-cap-sang-trong-o-cau-giay-ha-noi.jpg?v=1660226553731", title: "Hoa khai trương 🎊" },
+        { img: "https://nhahoa.com.vn/wp-content/uploads/2022/04/Hop-Hoa-Mung-Sinh-Nhat-Me-HH093.jpg", title: "Hoa sinh nhật 🎂" },
+        { img: "https://hoahanoi.com.vn/wp-content/uploads/2020/06/hoa-chuc-mung-sinh-nhat-bo-e1624945727169.jpg", title: "Hoa chúc mừng 🎉" },
+        { img: "https://dienhoaxanh.com/wp-content/uploads/2023/06/cam-hoa-de-ban-tiec-cuoi.png", title: "Hoa hội nghị & sự kiện 🏛️" },
+        { img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ70k4QuFO5Vl3mq1AsqhA4qnd2p3Y6VDitpA&s", title: "Hoa theo mùa & ngày lễ 🎄" },
+        { img: "https://happyflower.vn/app/uploads/2022/05/Hoacuoi_WhiteTulip_2.jpg", title: "Hoa cưới 💍" },
+        { img: "https://bizweb.dktcdn.net/100/347/446/files/hoa-khai-truong-cao-cap-sang-trong-o-cau-giay-ha-noi.jpg?v=1660226553731", title: "Hoa khai trương 🎊" },
+        { img: "https://nhahoa.com.vn/wp-content/uploads/2022/04/Hop-Hoa-Mung-Sinh-Nhat-Me-HH093.jpg", title: "Hoa sinh nhật 🎂" },
+        { img: "https://hoahanoi.com.vn/wp-content/uploads/2020/06/hoa-chuc-mung-sinh-nhat-bo-e1624945727169.jpg", title: "Hoa chúc mừng 🎉" },
+        { img: "https://dienhoaxanh.com/wp-content/uploads/2023/06/cam-hoa-de-ban-tiec-cuoi.png", title: "Hoa hội nghị & sự kiện 🏛️" },
+        { img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ70k4QuFO5Vl3mq1AsqhA4qnd2p3Y6VDitpA&s", title: "Hoa theo mùa & ngày lễ 🎄" },
+        { img: "https://happyflower.vn/app/uploads/2022/05/Hoacuoi_WhiteTulip_2.jpg", title: "Hoa cưới 💍" },
+        { img: "https://bizweb.dktcdn.net/100/347/446/files/hoa-khai-truong-cao-cap-sang-trong-o-cau-giay-ha-noi.jpg?v=1660226553731", title: "Hoa khai trương 🎊" },
+        { img: "https://nhahoa.com.vn/wp-content/uploads/2022/04/Hop-Hoa-Mung-Sinh-Nhat-Me-HH093.jpg", title: "Hoa sinh nhật 🎂" },
+        { img: "https://hoahanoi.com.vn/wp-content/uploads/2020/06/hoa-chuc-mung-sinh-nhat-bo-e1624945727169.jpg", title: "Hoa chúc mừng 🎉" },
+        { img: "https://dienhoaxanh.com/wp-content/uploads/2023/06/cam-hoa-de-ban-tiec-cuoi.png", title: "Hoa hội nghị & sự kiện 🏛️" },
+        { img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ70k4QuFO5Vl3mq1AsqhA4qnd2p3Y6VDitpA&s", title: "Hoa theo mùa & ngày lễ 🎄" },
+        { img: "https://happyflower.vn/app/uploads/2022/05/Hoacuoi_WhiteTulip_2.jpg", title: "Hoa cưới 💍" },
+        { img: "https://bizweb.dktcdn.net/100/347/446/files/hoa-khai-truong-cao-cap-sang-trong-o-cau-giay-ha-noi.jpg?v=1660226553731", title: "Hoa khai trương 🎊" },
+        { img: "https://nhahoa.com.vn/wp-content/uploads/2022/04/Hop-Hoa-Mung-Sinh-Nhat-Me-HH093.jpg", title: "Hoa sinh nhật 🎂" },
+        { img: "https://hoahanoi.com.vn/wp-content/uploads/2020/06/hoa-chuc-mung-sinh-nhat-bo-e1624945727169.jpg", title: "Hoa chúc mừng 🎉" },
+        { img: "https://dienhoaxanh.com/wp-content/uploads/2023/06/cam-hoa-de-ban-tiec-cuoi.png", title: "Hoa hội nghị & sự kiện 🏛️" },
+        { img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ70k4QuFO5Vl3mq1AsqhA4qnd2p3Y6VDitpA&s", title: "Hoa theo mùa & ngày lễ 🎄" },
+        { img: "https://happyflower.vn/app/uploads/2022/05/Hoacuoi_WhiteTulip_2.jpg", title: "Hoa cưới 💍" },
+        { img: "https://bizweb.dktcdn.net/100/347/446/files/hoa-khai-truong-cao-cap-sang-trong-o-cau-giay-ha-noi.jpg?v=1660226553731", title: "Hoa khai trương 🎊" },
+        { img: "https://nhahoa.com.vn/wp-content/uploads/2022/04/Hop-Hoa-Mung-Sinh-Nhat-Me-HH093.jpg", title: "Hoa sinh nhật 🎂" },
+        { img: "https://hoahanoi.com.vn/wp-content/uploads/2020/06/hoa-chuc-mung-sinh-nhat-bo-e1624945727169.jpg", title: "Hoa chúc mừng 🎉" },
+        { img: "https://dienhoaxanh.com/wp-content/uploads/2023/06/cam-hoa-de-ban-tiec-cuoi.png", title: "Hoa hội nghị & sự kiện 🏛️" },
+        { img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ70k4QuFO5Vl3mq1AsqhA4qnd2p3Y6VDitpA&s", title: "Hoa theo mùa & ngày lễ 🎄" },
+        { img: "https://happyflower.vn/app/uploads/2022/05/Hoacuoi_WhiteTulip_2.jpg", title: "Hoa cưới 💍" },
+        { img: "https://bizweb.dktcdn.net/100/347/446/files/hoa-khai-truong-cao-cap-sang-trong-o-cau-giay-ha-noi.jpg?v=1660226553731", title: "Hoa khai trương 🎊" },
+        { img: "https://nhahoa.com.vn/wp-content/uploads/2022/04/Hop-Hoa-Mung-Sinh-Nhat-Me-HH093.jpg", title: "Hoa sinh nhật 🎂" },
+        { img: "https://hoahanoi.com.vn/wp-content/uploads/2020/06/hoa-chuc-mung-sinh-nhat-bo-e1624945727169.jpg", title: "Hoa chúc mừng 🎉" },
+        { img: "https://dienhoaxanh.com/wp-content/uploads/2023/06/cam-hoa-de-ban-tiec-cuoi.png", title: "Hoa hội nghị & sự kiện 🏛️" },
+        { img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ70k4QuFO5Vl3mq1AsqhA4qnd2p3Y6VDitpA&s", title: "Hoa theo mùa & ngày lễ 🎄" },
+    ];
+
     return (
         <div className="feature" id="featureSection">
             <div className="container container-lg">
                 <div className="position-relative arrow-center">
-                    <div className="flex-align">
-                        <button
-                            type="button"
-                            id="feature-item-wrapper-prev"
-                            className="slick-prev slick-arrow flex-center rounded-circle bg-white text-xl hover-bg-main-600 hover-text-white transition-1"
-                        >
-                            <i className="ph ph-caret-left" />
-                        </button>
-                        <button
-                            type="button"
-                            id="feature-item-wrapper-next"
-                            className="slick-next slick-arrow flex-center rounded-circle bg-white text-xl hover-bg-main-600 hover-text-white transition-1"
-                        >
-                            <i className="ph ph-caret-right" />
-                        </button>
-                    </div>
-                    <div className="feature-item-wrapper">
-                        <Slider {...settings}>
-                            <div className="feature-item text-center">
-                                <div className="feature-item__thumb rounded-circle">
-                                    <Link to="/shop" className="w-100 h-100 flex-center">
-                                        <img src="assets/images/thumbs/feature-img1.png" alt="" />
+                    <Slider {...settings}>
+                        {category && category?.content?.map((item, index) => (
+                            <div key={index} className="feature-item text-center">
+                                <div className="feature-item__thumb rounded-circle overflow-hidden" style={{ width: '120px', height: '120px', margin: '0 auto' }}>
+                                    <Link to={`/shop?search=${item.name}`} className="w-100 h-100 flex-center">
+                                        <img src={featureItems[index].img} alt={item.name} className="w-100 h-100 object-cover rounded-circle" />
                                     </Link>
                                 </div>
                                 <div className="feature-item__content mt-16">
                                     <h6 className="text-lg mb-8">
-                                        <Link to="/shop" className="text-inherit">
-                                            Vegetables
-                                        </Link>
+                                        <Link to="/shop" className="text-inherit">{item.name}</Link>
                                     </h6>
-                                    <span className="text-sm text-gray-400">125+ Products</span>
                                 </div>
                             </div>
-                            <div className="feature-item text-center">
-                                <div className="feature-item__thumb rounded-circle">
-                                    <Link to="/shop" className="w-100 h-100 flex-center">
-                                        <img src="assets/images/thumbs/feature-img2.png" alt="" />
-                                    </Link>
-                                </div>
-                                <div className="feature-item__content mt-16">
-                                    <h6 className="text-lg mb-8">
-                                        <Link to="/shop" className="text-inherit">
-                                            Fish &amp; Meats
-                                        </Link>
-                                    </h6>
-                                    <span className="text-sm text-gray-400">125+ Products</span>
-                                </div>
-                            </div>
-                            <div className="feature-item text-center">
-                                <div className="feature-item__thumb rounded-circle">
-                                    <Link to="/shop" className="w-100 h-100 flex-center">
-                                        <img src="assets/images/thumbs/feature-img3.png" alt="" />
-                                    </Link>
-                                </div>
-                                <div className="feature-item__content mt-16">
-                                    <h6 className="text-lg mb-8">
-                                        <Link to="/shop" className="text-inherit">
-                                            Desserts
-                                        </Link>
-                                    </h6>
-                                    <span className="text-sm text-gray-400">125+ Products</span>
-                                </div>
-                            </div>
-                            <div className="feature-item text-center">
-                                <div className="feature-item__thumb rounded-circle">
-                                    <Link to="/shop" className="w-100 h-100 flex-center">
-                                        <img src="assets/images/thumbs/feature-img4.png" alt="" />
-                                    </Link>
-                                </div>
-                                <div className="feature-item__content mt-16">
-                                    <h6 className="text-lg mb-8">
-                                        <Link to="/shop" className="text-inherit">
-                                            Drinks &amp; Juice
-                                        </Link>
-                                    </h6>
-                                    <span className="text-sm text-gray-400">125+ Products</span>
-                                </div>
-                            </div>
-                            <div className="feature-item text-center">
-                                <div className="feature-item__thumb rounded-circle">
-                                    <Link to="/shop" className="w-100 h-100 flex-center">
-                                        <img src="assets/images/thumbs/feature-img5.png" alt="" />
-                                    </Link>
-                                </div>
-                                <div className="feature-item__content mt-16">
-                                    <h6 className="text-lg mb-8">
-                                        <Link to="/shop" className="text-inherit">
-                                            Animals Food
-                                        </Link>
-                                    </h6>
-                                    <span className="text-sm text-gray-400">125+ Products</span>
-                                </div>
-                            </div>
-                            <div className="feature-item text-center">
-                                <div className="feature-item__thumb rounded-circle">
-                                    <Link to="/shop" className="w-100 h-100 flex-center">
-                                        <img src="assets/images/thumbs/feature-img6.png" alt="" />
-                                    </Link>
-                                </div>
-                                <div className="feature-item__content mt-16">
-                                    <h6 className="text-lg mb-8">
-                                        <Link to="/shop" className="text-inherit">
-                                            Fresh Fruits
-                                        </Link>
-                                    </h6>
-                                    <span className="text-sm text-gray-400">125+ Products</span>
-                                </div>
-                            </div>
-                            <div className="feature-item text-center">
-                                <div className="feature-item__thumb rounded-circle">
-                                    <Link to="/shop" className="w-100 h-100 flex-center">
-                                        <img src="assets/images/thumbs/feature-img7.png" alt="" />
-                                    </Link>
-                                </div>
-                                <div className="feature-item__content mt-16">
-                                    <h6 className="text-lg mb-8">
-                                        <Link to="/shop" className="text-inherit">
-                                            Yummy Candy
-                                        </Link>
-                                    </h6>
-                                    <span className="text-sm text-gray-400">125+ Products</span>
-                                </div>
-                            </div>
-                            <div className="feature-item text-center">
-                                <div className="feature-item__thumb rounded-circle">
-                                    <Link to="/shop" className="w-100 h-100 flex-center">
-                                        <img src="assets/images/thumbs/feature-img2.png" alt="" />
-                                    </Link>
-                                </div>
-                                <div className="feature-item__content mt-16">
-                                    <h6 className="text-lg mb-8">
-                                        <Link to="/shop" className="text-inherit">
-                                            Fish &amp; Meats
-                                        </Link>
-                                    </h6>
-                                    <span className="text-sm text-gray-400">125+ Products</span>
-                                </div>
-                            </div>
-                            <div className="feature-item text-center">
-                                <div className="feature-item__thumb rounded-circle">
-                                    <Link to="/shop" className="w-100 h-100 flex-center">
-                                        <img src="assets/images/thumbs/feature-img8.png" alt="" />
-                                    </Link>
-                                </div>
-                                <div className="feature-item__content mt-16">
-                                    <h6 className="text-lg mb-8">
-                                        <Link to="/shop" className="text-inherit">
-                                            Dairy &amp; Eggs
-                                        </Link>
-                                    </h6>
-                                    <span className="text-sm text-gray-400">125+ Products</span>
-                                </div>
-                            </div>
-                            <div className="feature-item text-center">
-                                <div className="feature-item__thumb rounded-circle">
-                                    <Link to="/shop" className="w-100 h-100 flex-center">
-                                        <img src="assets/images/thumbs/feature-img9.png" alt="" />
-                                    </Link>
-                                </div>
-                                <div className="feature-item__content mt-16">
-                                    <h6 className="text-lg mb-8">
-                                        <Link to="/shop" className="text-inherit">
-                                            Snacks
-                                        </Link>
-                                    </h6>
-                                    <span className="text-sm text-gray-400">125+ Products</span>
-                                </div>
-                            </div>
-                            <div className="feature-item text-center">
-                                <div className="feature-item__thumb rounded-circle">
-                                    <Link to="/shop" className="w-100 h-100 flex-center">
-                                        <img src="assets/images/thumbs/feature-img10.png" alt="" />
-                                    </Link>
-                                </div>
-                                <div className="feature-item__content mt-16">
-                                    <h6 className="text-lg mb-8">
-                                        <Link to="/shop" className="text-inherit">
-                                            Frozen Foods
-                                        </Link>
-                                    </h6>
-                                    <span className="text-sm text-gray-400">125+ Products</span>
-                                </div>
-                            </div>
-                        </Slider>
-                    </div>
+                        ))}
+                    </Slider>
                 </div>
             </div>
         </div>
+    );
+};
 
-    )
-}
-
-export default FeatureOne
+export default FeatureOne;

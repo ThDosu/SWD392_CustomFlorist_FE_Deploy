@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Preloader from "../helper/Preloader";
 import HeaderOne from "../components/HeaderOne";
 import ProductDetailsOne from "../components/ProductDetailsOne";
@@ -10,14 +10,44 @@ import BottomFooter from "../components/BottomFooter";
 import BreadcrumbTwo from './../components/BreadcrumbTwo';
 import ScrollToTop from "react-scroll-to-top";
 import ColorInit from "../helper/ColorInit";
+import {  useSearchParams } from "react-router-dom";
+import { getProductById } from "../api/product";
+import { productFake } from "../fakedata/fakeProduct";
+import { ToastContainer } from "react-toastify";
 
 const ProductDetailsPageOne = () => {
+  const [searchParams] = useSearchParams();
+  const productId = searchParams.get("productId");
+  console.log("productId",productId)
 
-
-
+  const [productDetail,setProductDetail] = useState({})
+  const fetchProduct = async(productId) =>{
+    try{
+      const response = await getProductById(productId);
+      if(response.status === "OK"){
+        setProductDetail(response.data);
+      }else{
+        console.log('productFake', productFake)
+        const response = productFake.find((item) => item.id === Number(productId));
+        setProductDetail(response);
+      }
+      
+  
+    }catch{
+      console.log('productFake', productFake)
+      const response = productFake.find((item) => item.id === Number(productId));
+      console.log('ressasasponse', response)
+        setProductDetail(response);
+    }
+    
+  }
+  console.log('productDetail', productDetail)
+  useEffect(()=>{
+    fetchProduct(productId)
+  },[productId])
   return (
     <>
-
+ <ToastContainer/>
       {/* Preloader */}
       <Preloader />
 
@@ -34,10 +64,10 @@ const ProductDetailsPageOne = () => {
       <BreadcrumbTwo title={"Product Details"} />
 
       {/* ProductDetailsOne */}
-      <ProductDetailsOne />
+      <ProductDetailsOne productDetail={productDetail} />
 
       {/* NewArrivalTwo */}
-      <NewArrivalTwo />
+      {/* <NewArrivalTwo /> */}
 
       {/* ShippingOne */}
       <ShippingOne />

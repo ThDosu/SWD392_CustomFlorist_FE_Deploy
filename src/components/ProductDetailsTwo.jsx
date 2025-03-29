@@ -74,9 +74,9 @@ const ProductDetailsTwo = () => {
                                             alt=""
                                             className="position-absolute inset-block-start-0 inset-inline-start-0 w-100 h-100 z-n1"
                                         />
-                                        <div className="flex-align gap-16">
+                                        {/* <div className="flex-align gap-16">
                                             <span className="text-white text-sm">Special Offer:</span>
-                                        </div>
+                                        </div> */}
                                         <div className="countdown" id="countdown11">
                                             <ul className="countdown-list flex-align flex-wrap">
                                                 <li className="countdown-list__item text-heading flex-align gap-4 text-xs fw-medium w-28 h-28 rounded-4 border border-main-600 p-0 flex-center">
@@ -128,10 +128,10 @@ const ProductDetailsTwo = () => {
                                             </span>
                                         </div>
                                         <span className="text-sm fw-medium text-gray-500">|</span>
-                                        <span className="text-gray-900">
+                                        {/* <span className="text-gray-900">
                                             {" "}
                                             <span className="text-gray-400">SKU:</span>EB4DRP{" "}
-                                        </span>
+                                        </span> */}
                                     </div>
                                     <span className="mt-32 pt-32 text-gray-700 border-top border-gray-100 d-block" />
                                     <p className="text-gray-700">

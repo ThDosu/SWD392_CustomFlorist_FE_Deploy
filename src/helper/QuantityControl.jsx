@@ -1,10 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const QuantityControl = ({ initialQuantity = 1 }) => {
+const QuantityControl = ({ initialQuantity = 1, onQuantityChange }) => {
     const [quantity, setQuantity] = useState(initialQuantity);
 
-    const incrementQuantity = () => setQuantity(quantity + 1);
-    const decrementQuantity = () => setQuantity(quantity > 1 ? quantity - 1 : quantity);
+    const incrementQuantity = () => {
+        setQuantity(quantity + 1);
+    };
+
+    const decrementQuantity = () => {
+        if (quantity > 1) {
+            setQuantity(quantity - 1);
+        }
+    };
+
+    useEffect(() => {
+        if (onQuantityChange) {
+            onQuantityChange(quantity);
+        }
+    }, [quantity]);
 
     return (
         <div className="d-flex rounded-4 overflow-hidden">

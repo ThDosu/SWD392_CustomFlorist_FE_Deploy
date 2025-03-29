@@ -2,7 +2,7 @@ import React from 'react'
 
 const NewsletterOne = () => {
     return (
-        <div className="newsletter">
+        <div  hidden className="newsletter">
             <div className="container container-lg">
                 <div className="newsletter-box position-relative rounded-16 flex-align gap-16 flex-wrap z-1">
                     <img

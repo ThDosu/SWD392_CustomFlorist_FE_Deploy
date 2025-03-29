@@ -67,7 +67,7 @@ const FlashSalesOne = () => {
     }, []);
     return (
         <section className="flash-sales pt-80">
-            <div className="container container-lg">
+            {/* <div className="container container-lg">
                 <div className="section-heading">
                     <div className="flex-between flex-wrap gap-8">
                         <h5 className="mb-0">Flash Sales Today</h5>
@@ -218,7 +218,7 @@ const FlashSalesOne = () => {
                         </div>
                     </Slider>
                 </div>
-            </div>
+            </div> */}
         </section>
 
     )

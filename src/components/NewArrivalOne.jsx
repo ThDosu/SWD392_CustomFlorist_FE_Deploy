@@ -80,7 +80,7 @@ const NewArrivalOne = () => {
     };
     return (
         <section className="new-arrival pb-80">
-            <div className="container container-lg">
+            {/* <div className="container container-lg">
                 <div className="section-heading">
                     <div className="flex-between flex-wrap gap-8">
                         <h5 className="mb-0">New Arrivals</h5>
@@ -434,7 +434,7 @@ const NewArrivalOne = () => {
                         </div>
                     </Slider>
                 </div>
-            </div>
+            </div> */}
         </section>
 
     )

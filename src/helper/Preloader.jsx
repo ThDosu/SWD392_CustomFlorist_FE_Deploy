@@ -5,14 +5,14 @@ const Preloader = () => {
   useEffect(() => {
     setTimeout(function () {
       setActive(false);
-    }, 500);
+    }, 2500);
   }, []);
 
   return (
     <>
       {active ? (
         <div className="preloader">
-          <img src="assets/images/icon/preloader.gif" alt="" />
+          <img src="assets/images/icon/preloader_flower.gif" alt="" />
         </div>
 
       ) : (<div></div>)}

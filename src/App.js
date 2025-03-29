@@ -12,7 +12,7 @@ import AccountPage from "./pages/AccountPage";
 import BlogPage from "./pages/BlogPage";
 import BlogDetailsPage from "./pages/BlogDetailsPage";
 import ContactPage from "./pages/ContactPage";
-
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
     <BrowserRouter>
