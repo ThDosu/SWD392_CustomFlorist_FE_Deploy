@@ -196,12 +196,12 @@ const CustomBouquet = ({productDetail}) => {
 <div       style={{display: "flex"  }} 
 
  className="flex flex-wrap gap-6 justify-between">
-   <img 
-   style={imageStyle}
-        src={`${productDetail?.imageUrl||"https://th.bing.com/th/id/OIP.GOf_sxeKbeeKM5SSLHtzGgHaE7?w=278&h=185&c=7&r=0&o=5&dpr=1.3&pid=1.7"}`}
-        alt="Image Bouquet"
-        className=" object-cover rounded-md"
-      />
+  <img 
+  style={{ width: "300px", height: "300px", objectFit: "cover" }}
+  src={productDetail?.imageUrl || "https://th.bing.com/th/id/OIP.GOf_sxeKbeeKM5SSLHtzGgHaE7?w=278&h=185&c=7&r=0&o=5&dpr=1.3&pid=1.7"} 
+  alt="Image Bouquet" 
+  className="rounded-md"
+/>
       {UserID?(<>
   {flowerDetail?.map((flower,index) => (
     console.log('flower', flower),

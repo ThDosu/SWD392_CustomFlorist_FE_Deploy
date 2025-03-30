@@ -89,7 +89,7 @@ const CartSection = () => {
                                                 <td>
                                                     <div className="table-product d-flex align-items-center gap-24">
                                                         <Link to={`/product-details?productId=${item?.id}`} className="border rounded-8">
-                                                            <img style={{ maxWidth: "100px", height: "100px" }} src={item.image} alt={item.name} />
+                                                            <img style={{ maxWidth: "100px", height: "100px" }} src={item.imageUrl} alt={item.name} />
                                                         </Link>
                                                         <div className="table-product__content text-start">
                                                             <h6 className="title text-lg fw-semibold mb-8">
@@ -138,7 +138,7 @@ const CartSection = () => {
                             <div className="bg-color-three rounded-8 p-24 mt-24">
                                 <div className="flex-between gap-8">
                                     <span>Tổng cộng</span>
-                                    <span>${total.toFixed(0)} VND</span>
+                                    <span>{total.toFixed(0)} VND</span>
                                 </div>
                             </div>
                             <button onClick={handleCheckout} className="btn btn-main mt-40 py-18 w-100 rounded-8">

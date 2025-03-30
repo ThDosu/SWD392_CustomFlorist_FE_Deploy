@@ -106,14 +106,14 @@ const Login = () => {
                                 <input type="password" className={style.input} name="password" placeholder="Nhập mật khẩu" onChange={handleChange} />
                             </div>
                             <button type="submit" className={style.button}>Đăng nhập</button>
-                            <button className="btn border w-100 d-flex align-items-center justify-content-center shadow-md mt-3"
+                            {/* <button className="btn border w-100 d-flex align-items-center justify-content-center shadow-md mt-3"
                                 onClick={handleGoogleLogin}>
                                 <img src="/assets/images/logo/Logo_google.jpg" alt="Google Logo" style={{ height: '24px', marginRight: '10px' }} />
                                 <span>Đăng nhập với Google</span>
-                            </button>
-                            <div className="mt-48">
+                            </button> */}
+                            {/* <div className="mt-48">
                                 <Link to="#" className="text-danger-600 text-sm fw-semibold hover-text-decoration-underline">Quên mật khẩu?</Link>
-                            </div>
+                            </div> */}
                         </div>
                     </form>
 
